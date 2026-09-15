@@ -12,11 +12,6 @@ import base64
 
 st.set_page_config(page_title="Biały Montaż - Kosztorys", layout="centered")
 
-# --- SPRAWDZENIE LOGOWANIA ---
-if "logged_in" not in st.session_state or not st.session_state.logged_in:
-    st.warning("⚠️ Brak dostępu. Zaloguj się na stronie głównej aplikacji.")
-    st.stop()
-
 # --- CZCIONKA OBSŁUGUJĄCA POLSKIE ZNAKI ---
 if os.path.exists("Roboto.ttf"):
     pdfmetrics.registerFont(TTFont("PolskiFont", "Roboto.ttf"))
